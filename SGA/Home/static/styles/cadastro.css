@@ -1,0 +1,181 @@
+/* Reseta estilos padrões para um início limpo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #bbd2f0, #1b4f94);
+    color: #333;
+    line-height: 1.6;
+    height: 100vh;
+}
+
+/* Cabeçalho e menu de navegação */
+header {
+    width: 100%;
+    background-color: #2C3E50;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #3498db;
+    transform: scale(1.1);
+}
+
+/* Formulário de Cadastro */
+.base {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.base h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2C3E50;
+}
+
+.base p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+/* Estilo para os campos do formulário */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 1rem;
+    color: #34495e;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #34495e;
+}
+
+.form-group input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Botão de cadastrar */
+.btn-cadastrar {
+    width: 100%;
+    padding: 12px;
+    margin-top: 2vh;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cadastrar:hover {
+    background-color: #2980b9;
+}
+
+.error-message {
+    font-size: 0.9rem;
+    color: red;
+    margin-top: 5px;
+}
+
+
+/* Animação de Fade In */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .base {
+        padding: 30px;
+    }
+
+    .base h1 {
+        font-size: 2rem;
+    }
+
+    .base p {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 480px) {
+    .menu a {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    .base {
+        padding: 30px 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .base h1 {
+        font-size: 2rem;
+    }
+
+    .base p {
+        font-size: 0.9rem;
+    }
+}

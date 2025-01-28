@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGA - Relatórios</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/relatorio.css' %}">
+</head>
+<body>
+    <header>
+        <ul class="menu">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'avaliacao' %}">Avaliações</a></li>
+            <li><a href="{% url 'relatorio' %}">Relatórios</a></li>
+            <li><a href="{% url 'cadastro' %}">Cadastro</a></li>
+        </ul>
+    </header>
+    <main class="base">
+        <h1>SGA</h1>
+        <p>SGA - Sistema de Gerenciamento Acadêmico</p>
+    </main>
+    <script src="{% static 'scripts/relatorio.js' %}"></script>
+</body>
+</html>

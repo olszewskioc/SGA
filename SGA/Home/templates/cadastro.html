@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGA - Cadastro</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/cadastro.css' %}">
+</head>
+<body>
+    <header>
+            <ul class="menu">
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'avaliacao' %}">Avaliações</a></li>
+                <li><a href="{% url 'relatorio' %}">Relatórios</a></li>
+                <li><a href="{% url 'cadastro' %}">Cadastro</a></li>
+            </ul>
+    </header>
+    <main class="base">
+        <h1>Cadastro de Usuário</h1>
+        <p>Preencha os campos abaixo para se cadastrar no Sistema de Gerenciamento Acadêmico (SGA).</p>
+
+        <form id="cadastro-form">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+            </div>
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmar_senha">Confirmar Senha:</label>
+                <input type="password" id="confirmar_senha" name="confirmar_senha" placeholder="Confirme sua senha" required>
+            </div>
+            <button type="submit" class="btn-cadastrar">Cadastrar</button>
+        </form>
+    </main>
+
+<script src="{% static 'scripts/cadastro.js' %}"></script>
+</body>
+</html>

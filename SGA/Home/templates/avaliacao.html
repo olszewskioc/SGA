@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGA - Avaliações</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles/avaliacao.css' %}">
+</head>
+<body>
+    <header>
+        <ul class="menu">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="{% url 'avaliacao' %}">Avaliações</a></li>
+            <li><a href="{% url 'relatorio' %}">Relatórios</a></li>
+            <li><a href="{% url 'cadastro' %}">Cadastro</a></li>
+        </ul>
+    </header>
+    <main class="base">
+        <h1>Avaliações</h1>
+        <p>Verifique e altere as avaliações dos alunos</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Aluno</th>
+                    <th>Avaliação 1</th>
+                    <th>Avaliação 2</th>
+                    <th>Avaliação 3</th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td>Aluno 1</td>
+                        <td>Nota 1</td>
+                        <td>Nota 2</td>
+                        <td>Nota 3</td>
+                    </tr>
+                    <tr>
+                        <td>Aluno 2</td>
+                        <td>Nota 1</td>
+                        <td>Nota 2</td>
+                        <td>Nota 3</td>
+                    </tr>
+                </tbody>
+            </thead>
+        </table>
+    </main>
+    <script src="{% static 'scripts/avaliacao.js' %}"></script>
+</body>
+</html>

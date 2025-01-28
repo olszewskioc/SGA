@@ -1,0 +1,127 @@
+/* Reseta estilos padrões para um início limpo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #bbd2f0, #1b4f94);
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column; /* Alinha o conteúdo de forma vertical */
+    min-height: 100vh; /* Garante que o conteúdo ocupe a tela inteira */
+}
+
+/* Cabeçalho e menu de navegação */
+header {
+    width: 100%;
+    background-color: #2C3E50;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0; /* Fixa o cabeçalho no topo da página */
+    z-index: 1000; /* Garante que o cabeçalho fique acima do conteúdo */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #3498db;
+    transform: scale(1.1);
+}
+
+/* Base e título */
+.base {
+    text-align: center;
+    color: #34495e;
+    background-color: #e9e4e4;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    max-width: 600px;
+    width: 100%;
+    margin: 20vh auto; /* Espaço entre a base e o topo */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.base h1 {
+    font-size: 3rem;
+    color: #2C3E50;
+    margin-bottom: 10px;
+}
+
+.base p {
+    font-size: 1.2rem;
+    color: #303b47;
+}
+
+/* Animação de Fade In */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-150px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .base h1 {
+        font-size: 2.5rem;
+    }
+
+    .base p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu a {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    .base {
+        padding: 30px 15px;
+    }
+
+    .base h1 {
+        font-size: 2rem;
+    }
+
+    .base p {
+        font-size: 0.9rem;
+    }
+}
