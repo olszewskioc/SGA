@@ -65,6 +65,21 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             // Exibe a mensagem de sucesso
             alert('Usuário cadastrado com sucesso!');
+
+            // Cria um objeto de aluno com o nome, e-mail e notas vazias (para futuras edições)
+            const aluno = {
+                nome: nomeInput.value.trim(),
+                notas: [0, 0, 0] // Aqui podemos armazenar as notas para futuras edições
+            };
+
+            // Carrega os alunos existentes do localStorage ou cria uma lista vazia
+            let alunos = JSON.parse(localStorage.getItem("alunos")) || [];  // Agora, sempre retorna um array (se não existir, será vazio)
+            
+            // Adiciona o novo aluno ao array
+            alunos.push(aluno);
+
+            // Salva os dados atualizados no localStorage
+            localStorage.setItem("alunos", JSON.stringify(alunos));
         }
     }
 

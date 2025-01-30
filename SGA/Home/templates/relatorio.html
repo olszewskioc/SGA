@@ -18,8 +18,29 @@
         </ul>
     </header>
     <main class="base">
-        <h1>SGA</h1>
-        <p>SGA - Sistema de Gerenciamento Acadêmico</p>
+        <h1>Relatório de Desempenho</h1>
+        <p>Veja as médias e status de aprovação dos alunos.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Aluno</th>
+                    <th>Média</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="alunos-relatorio">
+                <!-- {% for aluno in alunos %}
+                <tr>
+                    <td>{{ aluno.nome }}</td>
+                    <td>{{ aluno.media|floatformat:2 }}</td>
+                    <td class="{% if aluno.media >= 7 %}aprovado{% else %}reprovado{% endif %}">
+                        {% if aluno.media >= 7 %}Aprovado{% else %}Reprovado{% endif %}
+                    </td>
+                </tr>
+                {% endfor %} -->
+            </tbody>
+        </table>
     </main>
     <script src="{% static 'scripts/relatorio.js' %}"></script>
 </body>

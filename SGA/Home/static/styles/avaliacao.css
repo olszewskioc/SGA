@@ -110,6 +110,68 @@ table tr:hover td {
     background-color: #e1e1e1;
 }
 
+.modal {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 50%;
+    border-radius: 10px;
+    height: 35vh;
+}
+
+.close {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+#edit-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas de tamanho igual */
+    gap: 10px;
+    height: 15vh;
+    margin-top: 2vh;
+}
+
+#edit-form label {
+    display: flex;
+    flex-direction: column; /* Mantém o rótulo acima do input */
+}
+
+#edit-form input {
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    border-width: 1px;
+    margin-bottom: 1rem;
+    text-align: center;
+    height: 2rem;
+}
+
+#edit-form button {
+    grid-column: span 2; /* Faz o botão ocupar as duas colunas */
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#edit-form button:hover {
+    background-color: #0056b3;
+}
 /* Responsividade - Ajustes para telas menores */
 @media (max-width: 768px) {
     .menu {
